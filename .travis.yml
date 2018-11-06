@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "9"
+cache: yarn
+branches:
+  only:
+  - master
+install:
+    - yarn
+    - yarn build
+addons:
+  ssh_known_hosts:
+  - 185.25.117.12
+  - 185.233.116.208
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: bash ./scripts/deploy.sh
+  on:
+    branch: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_2f5a511b2b6a_key -iv $encrypted_2f5a511b2b6a_iv
+  -in deploy_rsa.enc -out deploy_rsa -d

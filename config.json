@@ -1,0 +1,27 @@
+{
+  "companyName": "ZEON Network",
+  "tokenName": "ZEON",
+  "tokenSymbol": "ZEON",
+  "etherscanUrl": "https://ropsten.etherscan.io",
+  "landingPageDomain": "https://zeon.network/",
+  "domain": "https://dashboard.zeon.network",
+
+  "minEthContribution": "0.1",
+  "referralMinEthContribution": "10",
+
+  "supportEmail": "info@zeon.network",
+  "referralEmail": "info@zeon.network",
+
+  "agreementDoc": "https://zeon.network/agreement.pdf",
+  "whitepaperDoc": "https://zeon.network/whitepaper.pdf",
+  "yellowpaperDoc": "https://zeon.network/yellowpaper.pdf",
+
+  "telegramLink": "tg.com",
+  "facebookLink": "fb.com",
+  "twitterLink": "tw.com",
+  "mediumLink": "md.com",
+  "linkedinLink": "in.com",
+  "bitcointalkLink": "bt.com",
+
+  "appTitle": "ZEON Network ICO"
+}
