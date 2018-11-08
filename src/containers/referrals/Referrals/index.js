@@ -7,7 +7,6 @@ import { fetchReferrals } from '../../../redux/modules/referrals/referrals';
 import Address from '../../../components/referrals/Address';
 import Summary from '../Summary';
 import Users from '../Users';
-import Creds from '../../../components/dashboard/Creds';
 
 import config from '../../../utils/config';
 import s from './styles.scss';
@@ -27,28 +26,23 @@ class Referrals extends Component {
     } = this.props;
 
     return (
-      <div className={s.wrapper}>
-        <div className={s.main}>
-          <div>
-            <h2>{t('title')}</h2>
-            <p>{t('description')}</p>
-            <p>{t('conditions')}</p>
-            <p>{t('details')}</p>
-          </div>
-
-          <div className={s.address}>
-            <Address address={`${config.domain}/auth/sign-up?referral=${refCode}`}/>
-          </div>
-
-          <div className={s.users}>
-            {Boolean(users.length) && <Users/>}
-          </div>
+      <div className={s.main}>
+        <div className={s.topbar}>
+          <div className={s.title}>{t('title')}</div>
+        </div>
+        <div className={s.children}>
+          <p>{t('description')}</p>
+          <p>{t('conditions')}</p>
+          <p>{t('details')}</p>
+        </div>
+        <div className={s.address}>
+          <Address address={`${config.domain}/auth/sign-up?referral=${refCode}`}/>
         </div>
 
-        <div className={s.col}>
-          <div className={s.widget}><Summary/></div>
-          <div className={s.widget}><Creds/></div>
+        <div className={s.users}>
+          {Boolean(users.length) && <Users/>}
         </div>
+        <div className={s.widget}><Summary/></div>
       </div>
     );
   }

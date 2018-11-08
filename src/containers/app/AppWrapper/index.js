@@ -4,7 +4,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import { fetchUser, logout } from '../../../redux/modules/app/app';
 
-import Topbar from '../../../components/app/Topbar';
+import Sidebar from '../../../components/app/Sidebar';
 import MakeDepositPopup from '../MakeDepositPopup';
 import Dashboard from '../../dashboard/Dashboard';
 import Referrals from '../../referrals/Referrals';
@@ -32,8 +32,10 @@ class AppWrapper extends Component {
 
     return (
       <div className={s.wrapper}>
-        <div className={s.main}>
-          <Topbar kyc={kycIsVerified(kycStatus)} logout={logout}/>
+        <div className={s.sidebar_wrapper}>
+          <div className={s.sidebar}>
+            <Sidebar kyc={kycIsVerified(kycStatus)} logout={logout}/>
+          </div>
         </div>
         <Switch>
           <Route exact path={routes.DASHBOARD} component={Dashboard}/>
@@ -41,10 +43,9 @@ class AppWrapper extends Component {
           <Route exact path={routes.TRANSACTIONS} component={Transactions}/>
           <Route exact path={routes.SETTINGS} component={Settings}/>
           <Route exact path={routes.KYC_VERIFICATION} component={Shuftipro}/>
-          <Redirect exact from="/" to={routes.DASHBOARD} />
+          <Redirect exact from="/" to={routes.DASHBOARD}/>
           <Route component={Error404}/>
         </Switch>
-
         <MakeDepositPopup/>
       </div>
     );

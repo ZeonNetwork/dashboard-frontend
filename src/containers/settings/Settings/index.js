@@ -9,7 +9,6 @@ import Address from '../Address';
 import EnableTwoFactorAuthPopup from '../EnableTwoFactorAuthPopup';
 import DisableTwoFactorAuthPopup from '../DisableTwoFactorAuthPopup';
 import ChangeLanguage from '../ChangeLanguage';
-import Creds from '../../../components/dashboard/Creds';
 
 import s from './styles.scss';
 
@@ -20,22 +19,19 @@ class Settings extends Component {
     } = this.props;
 
     return (
-      <div className={s.wrapper}>
-        <div className={s.main}>
-          <h2>{t('title')}</h2>
+      <div className={s.main}>
+        <div className={s.topbar}>
+          <div className={s.title}>{t('title')}</div>
+        </div>
+        <div className={s.children}>
+          <div className={s.widget}><Address/></div>
           <div className={s.account}><Account/></div>
           <div className={s.language}><ChangeLanguage/></div>
+          <ChangePasswordPopup/>
+          <VerifyChangePasswordPopup/>
+          <EnableTwoFactorAuthPopup/>
+          <DisableTwoFactorAuthPopup/>
         </div>
-
-        <div className={s.col}>
-          <div className={s.widget}><Address/></div>
-          <div className={s.widget}><Creds/></div>
-        </div>
-
-        <ChangePasswordPopup />
-        <VerifyChangePasswordPopup />
-        <EnableTwoFactorAuthPopup />
-        <DisableTwoFactorAuthPopup />
       </div>
     );
   }

@@ -68,7 +68,6 @@ class Shuftipro extends Component {
 
     const renderPlugin = () => (
       <div>
-          <h2>{t('shuftipro.title')}</h2>
           {this.state.message
             ? (
               <div>
@@ -90,8 +89,13 @@ class Shuftipro extends Component {
     );
 
     return (
-      <div>
-        {renderPage()}
+      <div className={s.main}>
+        <div className={s.topbar}>
+          <div className={s.title}>{t('shuftipro.title')}</div>
+        </div>
+        <div className={s.children}>
+          {renderPage()}
+        </div>
       </div>
     );
   }

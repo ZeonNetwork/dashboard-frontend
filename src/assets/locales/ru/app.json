@@ -13,10 +13,12 @@
     "nav": {
       "dashboard": "Панель",
       "txs": "Транзакции",
-      "referral": "Партнерская программа",
+      "referral": "Партнерка",
       "verification": "Верификация",
       "transfer": "Перевод",
       "settings": "Настройки...",
+      "themeLight": "Светлая тема",
+      "themeDark": "Темная тема",
       "logout": "Выход"
     }
   }

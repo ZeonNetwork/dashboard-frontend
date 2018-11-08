@@ -10,15 +10,6 @@ body {
   }
 }
 
-.app {
-  width: 980px;
-  margin: 0 auto;
-
-  @media only screen and (max-width: 980px) {
-    width: calc(100% - 40px);
-  }
-}
-
 .nav {
   margin-bottom: 40px;
 }

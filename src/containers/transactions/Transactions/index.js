@@ -5,7 +5,6 @@ import { NonIdealState } from '@blueprintjs/core';
 
 import { fetchTransactions } from '../../../redux/modules/transactions/transactions';
 
-import Creds from '../../../components/dashboard/Creds';
 import Transaction from '../../../components/transactions/Transaction';
 
 import s from './styles.scss';
@@ -40,7 +39,7 @@ class Transactions extends Component {
         <NonIdealState
           title={t('mock.title')}
           description={t('mock.message')}
-          visual="error" />
+          visual="error"/>
       </div>
     );
 
@@ -58,16 +57,14 @@ class Transactions extends Component {
     };
 
     return (
-      <div className={s.wrapper}>
-        <div className={s.main}>
-          <h2>{t('title')}</h2>
+      <div className={s.main}>
+        <div className={s.topbar}>
+          <div className={s.title}>{t('title')}</div>
+        </div>
+        <div className={s.children}>
           <div className={s.txs}>
             {renderTxs()}
           </div>
-        </div>
-
-        <div className={s.col}>
-          <div className={s.widget}><Creds/></div>
         </div>
       </div>
     );

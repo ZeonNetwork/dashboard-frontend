@@ -17,6 +17,8 @@
       "verification": "Verification",
       "transfer": "Transfer",
       "settings": "Settings...",
+      "themeLight": "Light Theme",
+      "themeDark": "Dark Theme",
       "logout": "Logout"
     }
   }
