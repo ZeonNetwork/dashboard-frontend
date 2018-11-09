@@ -2,14 +2,14 @@ import { from } from 'seamless-immutable';
 import { createReducer, createSubmitAction, createAction } from '../../../utils/actions';
 
 export const INIT_SIGN_UP = 'auth/signUp/INIT_SIGN_UP';
-export const INFO_SIGN_UP = 'auth/signUp/INFO_SIGN_UP';
+// export const INFO_SIGN_UP = 'auth/signUp/INFO_SIGN_UP';
 export const VERIFY_SIGN_UP = 'auth/signUp/VERIFY_SIGN_UP';
 export const CLOSE_WALLET_CREDS = 'auth/signUp/CLOSE_WALLET_CREDS';
 export const CHANGE_STEP = 'auth/signUp/CHANGE_STEP';
 export const RESET_STORE = 'auth/signUp/RESET_STORE';
 
 export const initSignUp = createSubmitAction(INIT_SIGN_UP);
-export const infoSignUp = createSubmitAction(INFO_SIGN_UP);
+// export const infoSignUp = createSubmitAction(INFO_SIGN_UP);
 export const verifySignUp = createSubmitAction(VERIFY_SIGN_UP);
 export const closeWalletCreds = createAction(CLOSE_WALLET_CREDS);
 export const changeStep = createAction(CHANGE_STEP);
@@ -49,9 +49,10 @@ export default createReducer({
     state.merge({
       fetching: false,
       email: payload.email,
-      password: payload.password,
-      referral: payload.referral,
-      agreeTos: payload.agreeTos
+      verification: {
+        verificationId: payload.verification.id,
+        method: payload.verification.method
+      }
     })
   ),
 
@@ -61,34 +62,34 @@ export default createReducer({
     })
   ),
 
-  [infoSignUp.REQUEST]: (state) => (
-    state.merge({
-      fetching: true
-    })
-  ),
-
-  [infoSignUp.SUCCESS]: (state, { payload }) => (
-    state.merge({
-      fetching: false,
-      email: payload.email,
-      verification: {
-        verificationId: payload.verification.id,
-        method: payload.verification.method
-      }
-    })
-  ),
-
-  [infoSignUp.FAILURE]: (state) => (
-    state.merge({
-      fetching: false
-    })
-  ),
-
-  [verifySignUp.REQUEST]: (state) => (
-    state.merge({
-      fetching: true
-    })
-  ),
+  // [infoSignUp.REQUEST]: (state) => (
+  //   state.merge({
+  //     fetching: true
+  //   })
+  // ),
+  //
+  // [infoSignUp.SUCCESS]: (state, { payload }) => (
+  //   state.merge({
+  //     fetching: false,
+  //     email: payload.email,
+  //     verification: {
+  //       verificationId: payload.verification.id,
+  //       method: payload.verification.method
+  //     }
+  //   })
+  // ),
+  //
+  // [infoSignUp.FAILURE]: (state) => (
+  //   state.merge({
+  //     fetching: false
+  //   })
+  // ),
+  //
+  // [verifySignUp.REQUEST]: (state) => (
+  //   state.merge({
+  //     fetching: true
+  //   })
+  // ),
 
   [verifySignUp.SUCCESS]: (state, { payload }) => (
     state.merge({
