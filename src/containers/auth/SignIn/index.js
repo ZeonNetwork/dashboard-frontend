@@ -4,10 +4,11 @@ import { translate } from 'react-i18next';
 import { withRouter, Link } from 'react-router-dom';
 import queryString from 'query-string';
 
-import { initSignIn, verifySignIn } from '../../../redux/modules/auth/signIn';
+import { initSignIn, verifySignIn, closeWalletCreds } from '../../../redux/modules/auth/signIn';
 
 import InitSignInForm from '../../../components/auth/InitSignInForm';
 import VerifySignInForm from '../../../components/auth/VerifySignInForm';
+import WalletCreds from '../../../components/auth/WalletCreds';
 
 import s from './styles.scss';
 
@@ -17,10 +18,12 @@ const SignIn = (props) => {
     step,
     fetching,
     accessToken,
+    closeWalletCreds,
     verification: {
       verificationId,
       method
-    }
+    },
+    wallets
   } = props;
 
   const qp = queryString.parse(props.location.search);
@@ -48,6 +51,14 @@ const SignIn = (props) => {
         <InitSignInForm
           onSubmit={initSignIn}
           fetching={fetching}/>
+      );
+    }
+
+    if (s === 'walletCreds') {
+      return (
+        <WalletCreds
+          wallet={wallets[0]}
+          closeWalletCreds={closeWalletCreds}/>
       );
     }
 
@@ -84,6 +95,11 @@ const SignIn = (props) => {
 
 const TranslatedComponent = translate('auth')(SignIn);
 const ComponentWithRouter = withRouter(TranslatedComponent);
-export default connect((state) => ({
-  ...state.auth.signIn
-}))(ComponentWithRouter);
+export default connect(
+  (state) => ({
+    ...state.auth.signIn
+  }),
+  {
+    closeWalletCreds
+  }
+)(ComponentWithRouter);

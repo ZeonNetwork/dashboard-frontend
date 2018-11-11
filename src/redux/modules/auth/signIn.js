@@ -5,11 +5,13 @@ export const INIT_SIGN_IN = 'auth/signIn/INIT_SIGN_IN';
 export const VERIFY_SIGN_IN = 'auth/signIn/VERIFY_SIGN_IN';
 export const CHANGE_STEP = 'auth/signIn/CHANGE_STEP';
 export const RESET_STORE = 'auth/signIn/RESET_STORE';
+export const CLOSE_WALLET_CREDS = 'auth/signIn/CLOSE_WALLET_CREDS';
 
 export const initSignIn = createSubmitAction(INIT_SIGN_IN);
 export const verifySignIn = createSubmitAction(VERIFY_SIGN_IN);
 export const changeStep = createAction(CHANGE_STEP);
 export const resetStore = createAction(RESET_STORE);
+export const closeWalletCreds = createAction(CLOSE_WALLET_CREDS);
 
 const initialState = from({
   step: 'initSignIn',
@@ -18,7 +20,16 @@ const initialState = from({
   verification: {
     verificationId: '',
     method: ''
-  }
+  },
+  wallets: [
+    {
+      ticker: '',
+      address: '',
+      balance: '',
+      mnemonic: '',
+      privateKey: ''
+    }
+  ]
 });
 
 export default createReducer({
@@ -51,9 +62,11 @@ export default createReducer({
     })
   ),
 
-  [verifySignIn.SUCCESS]: (state) => (
+  [verifySignIn.SUCCESS]: (state, { payload }) => (
     state.merge({
-      fetching: false
+      fetching: false,
+      accessToken: payload.accessToken,
+      wallets: payload.wallets
     })
   ),
 

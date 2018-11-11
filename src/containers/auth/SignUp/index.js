@@ -4,10 +4,10 @@ import { translate } from 'react-i18next';
 import { withRouter, Link } from 'react-router-dom';
 import queryString from 'query-string';
 
-import { initSignUp, infoSignUp, verifySignUp, closeWalletCreds } from '../../../redux/modules/auth/signUp';
+import { initSignUp, /* infoSignUp, */ verifySignUp, closeWalletCreds } from '../../../redux/modules/auth/signUp';
 
 import InitSignUpForm from '../../../components/auth/InitSignUpForm';
-import InfoSignUpForm from '../../../components/auth/InfoSignUpForm';
+// import InfoSignUpForm from '../../../components/auth/InfoSignUpForm';
 import VerifySignUpForm from '../../../components/auth/VerifySignUpForm';
 import WalletCreds from '../../../components/auth/WalletCreds';
 
@@ -19,9 +19,9 @@ const SignUp = (props) => {
     step,
     fetching,
     email,
-    password,
-    referral,
-    agreeTos,
+    // password,
+    // referral,
+    // agreeTos,
     closeWalletCreds,
     verification: {
       verificationId,
@@ -65,20 +65,20 @@ const SignUp = (props) => {
       );
     }
 
-    if (currentStep === 'infoSignUp') {
-      return (
-        <InfoSignUpForm
-          onSubmit={infoSignUp}
-          fetching={fetching}
-          initialValues={{
-            email,
-            password,
-            referral,
-            agreeTos,
-            dob: null
-          }}/>
-      );
-    }
+    // if (currentStep === 'infoSignUp') {
+    //   return (
+    //     <InfoSignUpForm
+    //       onSubmit={infoSignUp}
+    //       fetching={fetching}
+    //       initialValues={{
+    //         email,
+    //         password,
+    //         referral,
+    //         agreeTos,
+    //         dob: null
+    //       }}/>
+    //   );
+    // }
 
     if (currentStep === 'walletCreds') {
       return (
