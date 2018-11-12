@@ -33,7 +33,7 @@ const BalanceInfo = (props) => {
 
       {icoBalance ? <Block
         label={t('balanceInfo.ico')}
-        value={`${bigNum(icoBalance, 6)} ZEON`}
+        value={`${bigNum(icoBalance, 2)} ZEON`}
         fetching={fetching}/>
         : ''}
 
