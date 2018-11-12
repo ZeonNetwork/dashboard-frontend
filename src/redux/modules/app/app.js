@@ -26,7 +26,8 @@ const initialState = from({
     country: '',
     ethAddress: '',
     kycStatus: '',
-    defaultVerificationMethod: ''
+    defaultVerificationMethod: '',
+    icoBalance: ''
   }
 });
 

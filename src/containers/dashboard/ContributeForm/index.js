@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
 import { translate, Interpolate } from 'react-i18next';
-import { Button, Callout, Intent } from '@blueprintjs/core';
+import { Button, /* Callout, */Intent } from '@blueprintjs/core';
 import classnames from 'classnames/bind';
 
 import { changeEth, openMnemonicPopup } from '../../../redux/modules/dashboard/buyTokens';
@@ -21,7 +21,6 @@ class ContributeForm extends Component {
   render() {
     const {
       openMnemonicPopup,
-
       t,
       kycStatus,
       eth,
@@ -36,12 +35,13 @@ class ContributeForm extends Component {
       <div>
         <h2>{t('contributeForm.title')}</h2>
 
-        <div className={s.alerts}>
-          <Callout icon="code" intent={Intent.DANGER}>{t('contributeForm.test')}</Callout>
-          {!isVerified(kycStatus)
-            ? <Callout icon="warning-sign" intent={Intent.WARNING}>{t('contributeForm.kycAlert')}</Callout>
-            : null}
-        </div>
+        {/* <div className={s.alerts}> */}
+          {/* <Callout icon="code" intent={Intent.DANGER}>{t('contributeForm.test')}</Callout> */}
+          {/* {!isVerified(kycStatus) */}
+            {/* ? <Callout icon="warning-sign"
+             intent={Intent.WARNING}>{t('contributeForm.kycAlert')}</Callout> */}
+            {/* : null} */}
+        {/* </div> */}
 
         <div>
           <Interpolate

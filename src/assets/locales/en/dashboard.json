@@ -4,6 +4,7 @@
     "title": "Balances",
     "eth": "Ethereum",
     "token": "{{tokenName}} token",
+    "ico": "ICO Balance",
     "deposit": "Make deposit"
   },
   "icoStatus": {

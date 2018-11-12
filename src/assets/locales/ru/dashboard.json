@@ -4,6 +4,7 @@
     "title": "Балансы",
     "eth": "Эфир",
     "token": "{{tokenName}} токенов",
+    "ico": "ICO Баланс",
     "deposit": "Сделать депозит"
   },
   "icoStatus": {
