@@ -32,7 +32,7 @@ const Transaction = (props) => {
 
   const dir = () => (direction === 'out' ? t('tx.direction.out') : t('tx.direction.in'));
   const amount = () => (type === 'eth_transfer' ? ethAmount : tokenAmount);
-  const symbol = () => (type === 'eth_transfer' ? 'ETH' : 'SPACE');
+  const symbol = () => (type === 'eth_transfer' ? 'ETH' : 'ZEON');
 
   return skeleton
     ? (

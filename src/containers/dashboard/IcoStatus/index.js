@@ -28,7 +28,7 @@ const IcoStatus = (props) => {
 
       <Block
         label={t('icoStatus.sold')}
-        value={`${bigNum(tokensSold, 0)} SPACE`}
+        value={`${bigNum(tokensSold, 0)} ZEON`}
         fetching={fetching}/>
 
       <Block

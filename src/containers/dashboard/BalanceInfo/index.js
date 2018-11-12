@@ -27,7 +27,7 @@ const BalanceInfo = (props) => {
 
       <Block
         label={t('balanceInfo.token')}
-        value={`${bigNum(tokenBalance, 2)} SPACE`}
+        value={`${bigNum(tokenBalance, 2)} ZEON`}
         fetching={fetching}/>
 
       <Button
