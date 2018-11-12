@@ -110,7 +110,8 @@ const ConnectedComponent = connect(
     minInvest: state.dashboard.txFee.minInvest,
     eth: state.dashboard.buyTokens.eth,
     rate: state.dashboard.dashboard.tokenPrice.ETH,
-    kycStatus: state.app.app.user.kycStatus
+    // kycStatus: state.app.app.user.kycStatus
+    kycStatus: 'verified' // temporary allow
   }),
   {
     changeEth,
