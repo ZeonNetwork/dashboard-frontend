@@ -6,6 +6,10 @@ export const REFERRALS = '/referrals';
 export const WITHDRAW = '/withdraw';
 export const SETTINGS = '/settings';
 export const KYC_VERIFICATION = '/kyc';
+export const VOTING = '/voting';
+export const TRADE = '/trade';
+export const SMART_INVESTING = '/smart-investing';
+export const DISTRIBUTION = '/distribution';
 
 export const AUTH = '/auth/';
 export const SIGN_IN = '/auth/sign-in';

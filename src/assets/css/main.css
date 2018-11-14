@@ -5,3 +5,15 @@
 :global(.pt-popover-wrapper.pt-fill) {
   display: block;
 }
+
+.pt-light button.pt-button.pt-intent-primary {
+  box-shadow: none;
+  line-height: 44px;
+  background: transparent !important;
+  border: 2px solid #205fed !important;
+  color: #2a2a2a;
+}
+
+.pt-light .pt-callout {
+  background-color: #f5f8fa;
+}

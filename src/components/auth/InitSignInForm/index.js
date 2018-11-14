@@ -3,7 +3,7 @@ import { translate } from 'react-i18next';
 import { reduxForm, Field } from 'redux-form';
 import { Button, Intent } from '@blueprintjs/core';
 
-import { emailValidate, passwordValidate } from '../../../utils/validators';
+import { emailValidate, required } from '../../../utils/validators';
 
 import RenderInput from '../../_forms/RenderInput';
 import RenderPassword from '../../_forms/RenderPassword';
@@ -31,7 +31,7 @@ const InitSignInForm = (props) => {
         component={RenderPassword}
         large
         placeholder={t('signIn.form.initSignIn.password')}
-        validate={passwordValidate}/>
+        validate={required}/>
 
       <div>
         <Button

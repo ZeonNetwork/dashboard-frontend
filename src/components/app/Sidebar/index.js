@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
-import windowDimensions from 'react-window-dimensions';
 import { NavLink } from 'react-router-dom';
 import { Icon, Button } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons/lib/esm/index';
@@ -39,6 +38,21 @@ const SideBar = (props) => {
           </NavLink>
         )
         : null}
+      <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} key={routes.VOTING} to={routes.VOTING}>
+        <Icon icon='people'/><span>Voting</span>
+      </NavLink>
+      <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} key={routes.TRADE} to={routes.TRADE}>
+        <Icon icon='people'/><span>Trade</span>
+      </NavLink>
+      <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} key={routes.SMART_INVESTING} to={routes.SMART_INVESTING}>
+        <Icon icon='people'/><span>Smart investing</span>
+      </NavLink>
+      <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} key={routes.DISTRIBUTION} to={routes.DISTRIBUTION}>
+        <Icon icon='people'/><span>Distribution</span>
+      </NavLink>
+      <a className={`pt-button pt-minimal ${s.sidebar_links}`} href='https://forms.amocrm.ru/tzvrvc' target='_blank'>
+        <Icon icon='people'/><span>Card</span>
+      </a>
     </div>
   );
 
