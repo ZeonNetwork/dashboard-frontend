@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { Icon, Button } from '@blueprintjs/core';
-import { IconNames } from '@blueprintjs/icons/lib/esm/index';
 
 import { changeTheme } from '../../../redux/modules/app/theme';
 import s from './styles.scss';
@@ -19,17 +18,16 @@ const SideBar = (props) => {
     changeTheme,
     theme
   } = props;
-
   const renderNavItems = () => (
     <div>
       <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} key={routes.DASHBOARD} to={routes.DASHBOARD}>
-        <Icon icon='dashboard'/><span>{t('topbar.nav.dashboard')}</span>
+        <Icon icon={<img src={require('../../../assets/images/icons/custom/dashboard.svg')}/>}/><span>{t('topbar.nav.dashboard')}</span>
       </NavLink>
       <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} key={routes.TRANSACTIONS} to={routes.TRANSACTIONS}>
-        <Icon icon='exchange'/><span>{t('topbar.nav.txs')}</span>
+        <Icon icon={<img src={require('../../../assets/images/icons/custom/transaction.svg')}/>}/><span>{t('topbar.nav.txs')}</span>
       </NavLink>
       <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} key={routes.REFERRALS} to={routes.REFERRALS}>
-        <Icon icon='people'/><span>{t('topbar.nav.referral')}</span>
+        <Icon icon={<img src={require('../../../assets/images/icons/custom/partner-program.svg')}/>}/><span>{t('topbar.nav.referral')}</span>
       </NavLink>
       {!kyc
         ? (
@@ -58,9 +56,9 @@ const SideBar = (props) => {
 
   const renderThemeToggler = () =>
     (theme === THEMES.dark
-      ? <Button className={`pt-button pt-minimal ${s.sidebar_links}`} minimal icon="flash" text={t('topbar.nav.themeLight')}
+      ? <Button className={`pt-button pt-minimal ${s.sidebar_links}`} minimal icon={<img src={require('../../../assets/images/icons/custom/light-mode.svg')}/>} text={t('topbar.nav.themeLight')}
                 onClick={() => changeTheme(THEMES.light)}/>
-      : <Button className={`pt-button pt-minimal ${s.sidebar_links}`} minimal icon="moon" text={t('topbar.nav.themeDark')}
+      : <Button className={`pt-button pt-minimal ${s.sidebar_links}`} minimal icon={<img src={require('../../../assets/images/icons/custom/night-mode.svg')}/>} text={t('topbar.nav.themeDark')}
                 onClick={() => changeTheme(THEMES.dark)}/>);
 
   return (
@@ -73,12 +71,12 @@ const SideBar = (props) => {
         to={routes.SETTINGS}
         className={`pt-button pt-minimal ${s.sidebar_links}`}
         tabIndex="0">
-        <Icon icon={IconNames.COG}/>
+        <Icon icon={<img src={require('../../../assets/images/icons/custom/settings.svg')}/>}/>
         <span>{t('topbar.nav.settings')}</span>
       </NavLink>
       <Button
         className={`pt-button pt-minimal ${s.sidebar_links}`}
-        icon="log-out"
+        icon={<img src={require('../../../assets/images/icons/custom/logout.svg')}/>}
         text={t('topbar.nav.logout')}
         onClick={() => logout()}/>
       <div className={s.theme_swith}>

@@ -46,14 +46,14 @@ const Topbar = (props) => {
         <ButtonGroup large={false}>
           <Button
             minimal
-            icon="moon"
+            icon={<img src={require('../../../assets/images/icons/custom/light-mode.svg')}/>}
             text={width > 800 && t('common:themes.dark')}
             className={classnames(theme === THEMES.dark && 'pt-active')}
             onClick={() => changeTheme(THEMES.dark)}/>
 
           <Button
             minimal
-            icon="flash"
+            icon={<img src={require('../../../assets/images/icons/custom/night-mode.svg')}/>} text={t('topbar.nav.themeDark')}
             text={width > 800 && t('common:themes.light')}
             className={classnames(theme === THEMES.light && 'pt-active')}
             onClick={() => changeTheme(THEMES.light)}/>

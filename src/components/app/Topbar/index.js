@@ -49,8 +49,8 @@ const Topbar = (props) => {
 
   const renderThemeToggler = () =>
     (theme === THEMES.dark
-      ? <Button minimal icon="flash" onClick={() => changeTheme(THEMES.light)}/>
-      : <Button minimal icon="moon" onClick={() => changeTheme(THEMES.dark)}/>);
+      ? <Button minimal icon={<img src={require('../../../assets/images/icons/custom/light-mode.svg')}/>} text={t('topbar.nav.themeLight')} onClick={() => changeTheme(THEMES.light)}/>
+      : <Button minimal icon={<img src={require('../../../assets/images/icons/custom/night-mode.svg')}/>} text={t('topbar.nav.themeDark')} onClick={() => changeTheme(THEMES.dark)}/>);
 
   return (
     <nav className="pt-navbar">
