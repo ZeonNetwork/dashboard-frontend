@@ -36,20 +36,12 @@ const SideBar = (props) => {
           </NavLink>
         )
         : null}
-      <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} key={routes.VOTING} to={routes.VOTING}>
-        <Icon icon='people'/><span>Voting</span>
-      </NavLink>
-      <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} key={routes.TRADE} to={routes.TRADE}>
-        <Icon icon='people'/><span>Trade</span>
-      </NavLink>
-      <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} key={routes.SMART_INVESTING} to={routes.SMART_INVESTING}>
-        <Icon icon='people'/><span>Smart investing</span>
-      </NavLink>
-      <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} key={routes.DISTRIBUTION} to={routes.DISTRIBUTION}>
-        <Icon icon='people'/><span>Distribution</span>
-      </NavLink>
+      <Button className={`pt-button pt-minimal ${s.sidebar_links}`} minimal icon={<img src={require('../../../assets/images/icons/custom/light-mode.svg')}/>} text='Voting [Nov]'/>
+      <Button className={`pt-button pt-minimal ${s.sidebar_links}`} minimal icon={<img src={require('../../../assets/images/icons/custom/light-mode.svg')}/>} text='Trade [Nov]'/>
+      <Button className={`pt-button pt-minimal ${s.sidebar_links}`} minimal icon={<img src={require('../../../assets/images/icons/custom/light-mode.svg')}/>} text='Smart investing [Dec]'/>
+      <Button className={`pt-button pt-minimal ${s.sidebar_links}`} minimal icon={<img src={require('../../../assets/images/icons/custom/light-mode.svg')}/>} text='Distribution [Dec]'/>
       <a className={`pt-button pt-minimal ${s.sidebar_links}`} href='https://forms.amocrm.ru/tzvrvc' target='_blank'>
-        <Icon icon='people'/><span>Card</span>
+        <Icon icon='people'/><span>Card [Soon]</span>
       </a>
     </div>
   );
