@@ -8,6 +8,10 @@ body {
   &:global(.pt-dark) {
     background-color: #293742;
   }
+
+  :global(.pt-light) {
+    color: #757b83;
+  }
 }
 
 .nav {

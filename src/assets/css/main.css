@@ -17,3 +17,7 @@
 .pt-light .pt-callout {
   background-color: #f5f8fa;
 }
+
+.pt-light .pt-button:not([class*="pt-intent-"]){
+  color: #757d85;
+}
