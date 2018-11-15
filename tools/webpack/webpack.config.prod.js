@@ -151,7 +151,7 @@ const rules = [
     use: [
       {
         loader: 'file-loader',
-        options: { name: '[name].[ext]' }
+        options: { name: 'assets/[hash].[ext]' }
       }
     ]
   }
