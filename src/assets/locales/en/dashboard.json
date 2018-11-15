@@ -8,15 +8,15 @@
     "deposit": "Make deposit"
   },
   "icoStatus": {
-    "title": "ICO status",
+    "title": "Status",
     "price": "Token price",
     "sold": "Tokens sold",
     "raised": "Raised",
     "days": "Days to go"
   },
   "contributeForm": {
-    "title": "Contribution",
-    "description": "<p>On this screen, you can purchase ZEON tokens with ETH in Ropsten testnet. Use the calculator below to evaluate sum for the desired amount of tokens.</p><p>Just input the amount of ETH you want to contribute and find out the number of ZEON tokens you will get. Please note that a little ETH adding on top to cover the gas fee. <a href='https://myetherwallet.github.io/knowledge-base/gas/what-is-gas-ethereum.html' target='_blank'>What is gas fee?</a></p>",
+    "title": "News",
+    "description": "<ol><li>ZEON Network completed a successful ICO.</li><li>We have created the ZEON Platform which is already in use using the Ethereum blockchain.</li><li>Each account has been assigned an Ethereum address (be sure to keep your private keys safe as we cannot recover lost keys).</li><li>With the wallet, you are able deposit ETH, buy, sell or transfer tokens to other wallets or exchanges. Free of charge (not including gas).</li><li>ICO Balance - your tokens balance is displayed on your personal dashboard.</li><li>We recommend to set up your Google 2FA authentication.</li></ol>",
     "form": {
       "placeholder": "ex: 10.014584",
       "tip": "Enter the value in ethers (ETH)",

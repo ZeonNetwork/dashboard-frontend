@@ -35,15 +35,7 @@ class ContributeForm extends Component {
       <div>
         <h2>{t('contributeForm.title')}</h2>
 
-        {/* <div className={s.alerts}> */}
-          {/* <Callout icon="code" intent={Intent.DANGER}>{t('contributeForm.test')}</Callout> */}
-          {/* {!isVerified(kycStatus) */}
-            {/* ? <Callout icon="warning-sign"
-             intent={Intent.WARNING}>{t('contributeForm.kycAlert')}</Callout> */}
-            {/* : null} */}
-        {/* </div> */}
-
-        <div>
+        <div className={s.description}>
           <Interpolate
             i18nKey="dashboard:contributeForm.description"
             useDangerouslySetInnerHTML={true}/>

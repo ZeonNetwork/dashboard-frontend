@@ -64,7 +64,6 @@ function* closeWalletCredsIterator() {
 }
 
 function* closeWalletCredsSaga() {
-  console.log('1111');
   yield takeLatest(
     CLOSE_WALLET_CREDS,
     closeWalletCredsIterator

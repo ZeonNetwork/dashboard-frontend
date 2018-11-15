@@ -46,14 +46,19 @@ const Topbar = (props) => {
         <ButtonGroup large={false}>
           <Button
             minimal
-            icon={<img src={require('../../../assets/images/icons/custom/light-mode.svg')}/>}
+            icon={(theme === THEMES.dark)
+              ? <img src={require('../../../assets/images/icons/custom/dark/dark-mode.svg')}/>
+              : <img src={require('../../../assets/images/icons/custom/light/dark-mode.svg')}/>}
             text={width > 800 && t('common:themes.dark')}
             className={classnames(theme === THEMES.dark && 'pt-active')}
             onClick={() => changeTheme(THEMES.dark)}/>
 
           <Button
             minimal
-            icon={<img src={require('../../../assets/images/icons/custom/night-mode.svg')}/>} text={t('topbar.nav.themeDark')}
+            icon={(theme === THEMES.dark)
+              ? <img src={require('../../../assets/images/icons/custom/dark/light-mode.svg')}/>
+              : <img src={require('../../../assets/images/icons/custom/light/light-mode.svg')}/>}
+            text={t('topbar.nav.themeDark')}
             text={width > 800 && t('common:themes.light')}
             className={classnames(theme === THEMES.light && 'pt-active')}
             onClick={() => changeTheme(THEMES.light)}/>

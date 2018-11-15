@@ -10,6 +10,267 @@
   text-align: left !important;
 }
 
+:global(.menu-active) span {
+  color: #3885f4;
+}
+
 .theme_swith {
   margin-top: 50px;
+}
+
+.navlinkIcon {
+  height: 18px;
+  width: 18px;
+  float: left;
+  background-repeat: no-repeat;
+}
+
+.dashboard {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/dashboard.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/dashboard.svg');
+  }
+}
+
+:global(.menu-active) .dashboard {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light_active/dashboard.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark_active/dashboard.svg');
+  }
+}
+
+.card {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/card.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/card.svg');
+  }
+}
+
+:global(.menu-active) .card {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light_active/card.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark_active/card.svg');
+  }
+}
+
+.distrib {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/distrib.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/distrib.svg');
+  }
+}
+
+:global(.menu-active) .distrib {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light_active/distrib.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark_active/distrib.svg');
+  }
+}
+
+.light-mode {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/dark-mode.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/light-mode.svg');
+  }
+}
+
+:global(.menu-active) .light-mode {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light_active/light-mode.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark_active/light-mode.svg');
+  }
+}
+
+.logout {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/logout.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/logout.svg');
+  }
+}
+
+.dark-mode {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/dark-mode.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/dark-mode.svg');
+  }
+}
+
+:global(.menu-active) .dark-mode {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light_active/dark-mode.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark_active/dark-mode.svg');
+  }
+}
+
+.partner-program {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/partner-program.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/partner-program.svg');
+  }
+}
+
+:global(.menu-active) .partner-program {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light_active/partner-program.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark_active/partner-program.svg');
+  }
+}
+
+.settings {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/settings.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/settings.svg');
+  }
+}
+
+:global(.menu-active) .settings {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light_active/settings.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark_active/settings.svg');
+  }
+}
+
+.smart {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/smart.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/smart.svg');
+  }
+}
+
+:global(.menu-active) .smart {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light_active/smart.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark_active/smart.svg');
+  }
+}
+
+.trade {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/trade.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/trade.svg');
+  }
+}
+
+:global(.menu-active) .trade {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light_active/trade.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark_active/trade.svg');
+  }
+}
+
+.transaction {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/transaction.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/transaction.svg');
+  }
+}
+
+:global(.menu-active) .transaction {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light_active/transaction.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark_active/transaction.svg');
+  }
+}
+
+.verification {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/verification.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/verification.svg');
+  }
+}
+
+:global(.menu-active) .verification {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light_active/verification.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark_active/verification.svg');
+  }
+}
+
+.voting {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light/voting.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark/voting.svg');
+  }
+}
+
+:global(.menu-active) .voting {
+  &.light {
+    background-image: url('../../../assets/images/icons/custom/light_active/voting.svg');
+  }
+
+  &.dark {
+    background-image: url('../../../assets/images/icons/custom/dark_active/voting.svg');
+  }
 }

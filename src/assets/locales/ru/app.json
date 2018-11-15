@@ -11,10 +11,15 @@
   "topbar": {
     "brand": "{{companyName}}",
     "nav": {
-      "dashboard": "Панель",
+      "dashboard": "Платформа",
       "txs": "Транзакции",
-      "referral": "Партнерка",
+      "referral": "Реферал",
       "verification": "Верификация",
+      "voting": "Голосования [Ноя]",
+      "trade": "Трейдинг [Ноя]",
+      "smart": "Инвестировние [Дек]",
+      "distrib": "Дистрибьюция [Дек]",
+      "card": "Карта [Скоро]",
       "transfer": "Перевод",
       "settings": "Настройки...",
       "themeLight": "Светлая тема",
