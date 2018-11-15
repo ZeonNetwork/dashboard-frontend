@@ -32,7 +32,7 @@ const SideBar = (props) => {
       {!kyc
         ? (
           <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} to={routes.KYC_VERIFICATION}>
-            <Icon icon='endorsed'/><span>{t('topbar.nav.verification')}</span>
+            <Icon icon={<img src={require('../../../assets/images/icons/custom/verification.svg')}/>}/><span>{t('topbar.nav.verification')}</span>
           </NavLink>
         )
         : null}
