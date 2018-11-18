@@ -74,16 +74,16 @@ class ContributeForm extends Component {
               : null}
           </div>
 
-          //<div className={s.button}>
-           // <Button
-           //   large
-           //   rightIcon="arrow-right"
-           //   intent={Intent.PRIMARY}
-           //   disabled={!isVerified(kycStatus) || invalid}
-           //   onClick={() => openMnemonicPopup()}>
-          //    {t('contributeForm.form.submit')}
-          //  </Button>
-        //  </div>
+          <div className={s.button}>
+           <Button
+           large
+           rightIcon="arrow-right"
+           intent={Intent.PRIMARY}
+           disabled={!isVerified(kycStatus) || invalid}
+           onClick={() => openMnemonicPopup()}>
+          {t('contributeForm.form.submit')}
+         </Button>
+         </div>
         </form>
 
         <MnemonicPopup/>
