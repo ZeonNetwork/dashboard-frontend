@@ -23,7 +23,7 @@ const IcoStatus = (props) => {
     <Callout title={t('icoStatus.title')}>
       <Block
         label={t('icoStatus.price')}
-        value={`${bigNum(tokenPrice.ETH, 4)} ETH / ${bigNum(tokenPrice.USD, 6)}$`}
+        value={`/* ${bigNum(tokenPrice.ETH, 4)} ETH */ / ${bigNum(tokenPrice.USD, 6)}$`}
         fetching={fetching}/>
 
       <Block
