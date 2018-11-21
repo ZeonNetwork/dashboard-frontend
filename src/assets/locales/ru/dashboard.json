@@ -5,6 +5,7 @@
     "eth": "Эфир",
     "token": "{{tokenName}} токенов",
     "ico": "ICO Баланс",
+    "oldWallet": "Кошелек ICO",
     "deposit": "Сделать депозит"
   },
   "icoStatus": {

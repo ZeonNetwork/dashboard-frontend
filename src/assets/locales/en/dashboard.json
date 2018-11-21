@@ -5,6 +5,7 @@
     "eth": "Ethereum",
     "token": "{{tokenName}} token",
     "ico": "ICO Balance",
+    "oldWallet": "ICO Wallet",
     "deposit": "Make deposit"
   },
   "icoStatus": {

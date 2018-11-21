@@ -16,6 +16,7 @@ const BalanceInfo = (props) => {
     openMakeDepositPopup,
     ethBalance,
     icoBalance,
+    oldWallet,
     tokenBalance
   } = props;
 
@@ -32,9 +33,15 @@ const BalanceInfo = (props) => {
         fetching={fetching}/>
 
       {icoBalance ? <Block
-        label={t('balanceInfo.ico')}
-        value={`${bigNum(icoBalance, 2)} ZEON`}
-        fetching={fetching}/>
+          label={t('balanceInfo.ico')}
+          value={`${bigNum(icoBalance, 2)} ZEON`}
+          fetching={fetching}/>
+        : ''}
+
+      {oldWallet ? <Block
+          label={t('balanceInfo.oldWallet')}
+          value={oldWallet}
+          fetching={fetching}/>
         : ''}
 
       <Button
@@ -52,7 +59,8 @@ const TranslatedComponent = translate('dashboard')(BalanceInfo);
 export default connect(
   (state) => ({
     ...state.dashboard.dashboard,
-    icoBalance: state.app.app.user.icoBalance
+    icoBalance: state.app.app.user.icoBalance,
+    oldWallet: state.app.app.user.oldWallet
   }),
   {
     openMakeDepositPopup

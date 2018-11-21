@@ -25,6 +25,7 @@ const initialState = from({
     dob: '',
     country: '',
     ethAddress: '',
+    oldWallet: '',
     kycStatus: '',
     defaultVerificationMethod: '',
     icoBalance: ''
