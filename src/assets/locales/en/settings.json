@@ -19,7 +19,8 @@
     }
   },
   "address": {
-    "title": "Your wallet address"
+    "title": "Your current wallet address",
+    "oldWallet": "Your ICO wallet address"
   },
   "changePasswordPopup": {
     "title": "Change password"

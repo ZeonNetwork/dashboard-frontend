@@ -5,6 +5,10 @@
 .val {
   font-size: 24px;
   transition: 0.2s linear all;
+
+  &.small {
+    font-size: 9px;
+  }
 }
 
 .label {

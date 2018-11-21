@@ -8,12 +8,13 @@ const Block = (props) => {
   const {
     value,
     label,
+    size,
     fetching
   } = props;
 
   return (
     <div className={s.block}>
-      <div className={cx(s.val, fetching && 'pt-skeleton')}>
+      <div className={cx(s.val, size || '', fetching && 'pt-skeleton')}>
         {value}
       </div>
       <div className={cx(s.label, fetching && 'pt-skeleton')}>

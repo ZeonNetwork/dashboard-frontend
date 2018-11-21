@@ -8,35 +8,60 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 class Address extends Component {
   constructor(props) {
     super(props);
-    this.state = { isCopied: false };
+    this.state = {
+      ethAddressIsCopied: false,
+      oldWalletIsCopied: false
+    };
   }
 
   render() {
     const {
       t,
-      ethAddress
+      ethAddress,
+      oldWallet
     } = this.props;
 
-    const { isCopied } = this.state;
+    const { ethAddressIsCopied, oldWalletIsCopied } = this.state;
 
     return (
-      <Callout title={t('address.title')}>
-        <InputGroup
-          large
-          disabled
-          value={ethAddress}
-          rightElement={
-            <CopyToClipboard
-              text={ethAddress}
-              onCopy={() => this.setState({ isCopied: true })}>
-              <Button
-                minimal
-                large
-                intent={Intent.PRIMARY}
-                icon={isCopied ? 'saved' : 'clipboard'}/>
-            </CopyToClipboard>
-          }/>
-      </Callout>
+      <div>
+        <Callout title={t('address.title')}>
+          <InputGroup
+            large
+            disabled
+            value={ethAddress}
+            rightElement={
+              <CopyToClipboard
+                text={ethAddress}
+                onCopy={() => this.setState({ ethAddressIsCopied: true })}>
+                <Button
+                  minimal
+                  large
+                  intent={Intent.PRIMARY}
+                  icon={ethAddressIsCopied ? 'saved' : 'clipboard'}/>
+              </CopyToClipboard>
+            }/>
+        </Callout>
+        {oldWallet
+          ? <Callout title={t('address.oldWallet')}>
+            <InputGroup
+              large
+              disabled
+              value={oldWallet}
+              rightElement={
+                <CopyToClipboard
+                  text={oldWallet}
+                  onCopy={() => this.setState({ oldWalletIsCopied: true })}>
+                  <Button
+                    minimal
+                    large
+                    intent={Intent.PRIMARY}
+                    icon={oldWalletIsCopied ? 'saved' : 'clipboard'}/>
+                </CopyToClipboard>
+              }/>
+          </Callout>
+          : ''}
+      </div>
     );
   }
 }
@@ -44,7 +69,8 @@ class Address extends Component {
 const TranslatedComponent = translate('settings')(Address);
 export default connect(
   (state) => ({
-    ethAddress: state.app.app.user.ethAddress
+    ethAddress: state.app.app.user.ethAddress,
+    oldWallet: state.app.app.user.oldWallet
   }),
   null
 )(TranslatedComponent);

@@ -39,6 +39,7 @@ const BalanceInfo = (props) => {
         : ''}
 
       {oldWallet ? <Block
+          size='small'
           label={t('balanceInfo.oldWallet')}
           value={oldWallet}
           fetching={fetching}/>

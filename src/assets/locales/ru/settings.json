@@ -19,7 +19,8 @@
     }
   },
   "address": {
-    "title": "Ваш адрес кошелька"
+    "title": "Ваш адрес текущего кошелька",
+    "oldWallet": "Ваш адрес кошелька ICO"
   },
   "changePasswordPopup": {
     "title": "Изменить пароль"
