@@ -2,7 +2,7 @@
   "companyName": "ZEON Network",
   "tokenName": "ZEON",
   "tokenSymbol": "ZEON",
-  "etherscanUrl": "https://ropsten.etherscan.io",
+  "etherscanUrl": "https://etherscan.io",
   "landingPageDomain": "https://zeon.network/",
   "domain": "https://dashboard.zeon.network",
 
