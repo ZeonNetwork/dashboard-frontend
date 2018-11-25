@@ -1,5 +1,5 @@
 export const getThemeFromStorage = () =>
-  localStorage.getItem('theme') || '';
+  localStorage.getItem('theme') || 'pt-dark';
 
 export const setThemeToStorage = (theme) => {
   localStorage.setItem('theme', theme);
