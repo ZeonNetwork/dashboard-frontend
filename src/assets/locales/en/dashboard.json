@@ -17,9 +17,9 @@
   },
   "contributeForm": {
     "title": "News",
-    "description":"<ol><li>ZEON Network completed a successful ICO.</li><li>We have created the ZEON Platform which is already in use using the Ethereum blockchain.</li><li>Each account has been assigned an Ethereum address (be sure to keep your private keys safe as we cannot recover lost keys).</li><li>With the wallet, you are able deposit ETH, buy, sell or transfer tokens to other wallets or exchanges. Free of charge (not including gas).</li><li>ICO Balance - your tokens balance is displayed on your personal dashboard.</li><li>We recommend to set up your Google 2FA authentication.</li></ol>",
+    "description":"<ol><li>ZEON Network completed a successful ICO.</li><li>We have created the ZEON Platform which is already in use using the Ethereum blockchain.</li><li>Each account has been assigned an Ethereum address (be sure to keep your private keys safe as we cannot recover lost keys).</li><li>With the wallet, you are able deposit ETH, buy, sell or transfer tokens to other wallets or exchanges. Free of charge (not including gas).</li><li>ICO Balance - your tokens balance is displayed on your personal dashboard.</li><li>We recommend to set up your Google 2FA authentication.</li><li>You can buy unsold tokens now and immediately get them on your wallet (Ethereum smart-contract). Please, do not forget about gas fee.</li.</ol>",
     "form": {
-      "placeholder": "ex: 10.014584",
+      "placeholder": "ex: 10.0149",
       "tip": "Enter the value in ethers (ETH)",
       "submit": "Confirm purchase"
     },
