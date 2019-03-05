@@ -2,19 +2,19 @@
   "companyName": "ZEON Network",
   "tokenName": "ZEON",
   "tokenSymbol": "ZEON",
-  "etherscanUrl": "https://etherscan.io",
+  "etherscanUrl": "https://etherscan.io/token/0xe5b826ca2ca02f09c1725e9bd98d9a8874c30532",
   "landingPageDomain": "https://zeon.network/",
   "domain": "https://dashboard.zeon.network",
 
   "minEthContribution": "0.1",
-  "referralMinEthContribution": "10",
+  "referralMinEthContribution": "0.1",
 
-  "supportEmail": "info@zeon.network",
+  "supportEmail": "support@zeon.network",
   "referralEmail": "info@zeon.network",
 
   "agreementDoc": "https://zeon.network/agreement.pdf",
   "whitepaperDoc": "https://zeon.network/whitepaper.pdf",
-  "yellowpaperDoc": "https://zeon.network/yellowpaper.pdf",
+  "yellowpaperDoc": "https://zeon.network/onepage.pdf",
 
   "telegramLink": "tg.com",
   "facebookLink": "fb.com",
