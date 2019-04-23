@@ -13,7 +13,7 @@ import { THEMES } from '../../../utils/theme';
 const SideBar = (props) => {
   const {
     t,
-    kyc,
+    // kyc,
     logout,
     changeTheme,
     theme
@@ -36,14 +36,16 @@ const SideBar = (props) => {
         <div className={`${s.navlinkIcon} ${s['partner-program']} ${(theme === THEMES.dark) ? s.dark : s.light}`}/>
         <span>{t('topbar.nav.referral')}</span>
       </NavLink>
-      {!kyc
+      {/* {!kyc
         ? (
-          <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`} to={routes.KYC_VERIFICATION} activeClassName='menu-active'>
-            <div className={`${s.navlinkIcon} ${s.verification} ${(theme === THEMES.dark) ? s.dark : s.light}`}/>
+          <NavLink className={`pt-button pt-minimal ${s.sidebar_links}`}
+           to={routes.KYC_VERIFICATION} activeClassName='menu-active'>
+            <div className={`${s.navlinkIcon} ${s.verification}
+             ${(theme === THEMES.dark) ? s.dark : s.light}`}/>
             <span>{t('topbar.nav.verification')}</span>
           </NavLink>
         )
-        : null}
+        : null} */}
       <Button className={`pt-button pt-minimal ${s.sidebar_links}`} minimal
               icon={(theme === THEMES.dark)
                 ? <img src={require('../../../assets/images/icons/custom/dark/voting.svg')}/>

@@ -36,13 +36,13 @@ const Topbar = (props) => {
         <NavLink className="pt-button pt-minimal" key={routes.REFERRALS} to={routes.REFERRALS}>
           <Icon icon='people'/><span>{t('topbar.nav.referral')}</span>
         </NavLink>
-        {!kyc
+        {/* {!kyc
           ? (
             <NavLink className="pt-button pt-minimal" to={routes.KYC_VERIFICATION}>
               <Icon icon='endorsed'/><span>{t('topbar.nav.verification')}</span>
             </NavLink>
           )
-          : null}
+          : null} */}
       </div>
     );
   };

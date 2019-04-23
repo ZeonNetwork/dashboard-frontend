@@ -10,7 +10,7 @@ const NavMenuDropdown = (props) => {
   const {
     t,
     logout,
-    kyc,
+    // kyc,
     width
   } = props;
 
@@ -45,7 +45,7 @@ const NavMenuDropdown = (props) => {
               <span>{t('topbar.nav.referral')}</span>
             </NavLink>
           </li>
-          {!kyc
+        {/*  {!kyc
             ? (
               <li>
                 <NavLink
@@ -57,7 +57,7 @@ const NavMenuDropdown = (props) => {
                 </NavLink>
               </li>
             )
-            : null}
+            : null} */}
           <li>
             <NavLink
               to={routes.SETTINGS}

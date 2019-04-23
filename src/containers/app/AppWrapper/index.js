@@ -13,7 +13,7 @@ import Dashboard from '../../dashboard/Dashboard';
 import Referrals from '../../referrals/Referrals';
 import Transactions from '../../transactions/Transactions';
 import Settings from '../../settings/Settings';
-import Shuftipro from '../../../components/verification/Shuftipro';
+// import Shuftipro from '../../../components/verification/Shuftipro';
 import Error404 from '../../../components/common/Error404';
 
 import * as routes from '../../../routes';
@@ -53,7 +53,7 @@ class AppWrapper extends Component {
           <Route exact path={routes.REFERRALS} component={Referrals}/>
           <Route exact path={routes.TRANSACTIONS} component={Transactions}/>
           <Route exact path={routes.SETTINGS} component={Settings}/>
-          <Route exact path={routes.KYC_VERIFICATION} component={Shuftipro}/>
+          {/* <Route exact path={routes.KYC_VERIFICATION} component={Shuftipro}/> */}
           <Redirect exact from="/" to={routes.DASHBOARD}/>
           <Route component={Error404}/>
         </Switch>
