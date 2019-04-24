@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { NavLink, withRouter } from 'react-router-dom';
 import { Button } from '@blueprintjs/core';
+import { library as fontAwesomeLibrary } from '@fortawesome/fontawesome-svg-core';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faMediumM, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { changeTheme } from '../../../redux/modules/app/theme';
 import s from './styles.scss';
@@ -10,6 +14,8 @@ import s from './styles.scss';
 import * as routes from '../../../routes';
 import { THEMES } from '../../../utils/theme';
 
+
+fontAwesomeLibrary.add(faPaperPlane, faTwitter, faMediumM, faGithub);
 const SideBar = (props) => {
   const {
     t,
@@ -76,38 +82,57 @@ const SideBar = (props) => {
   const renderThemeToggler = () =>
     (theme === THEMES.dark
       ? <Button className={`pt-button pt-minimal ${s.sidebar_links} active-button`} minimal
-                icon={<img src={require('../../../assets/images/icons/custom/dark_active/light-mode.svg')}/>} text={t('topbar.nav.themeLight')}
+                icon={<img src={require('../../../assets/images/icons/custom/dark_active/light-mode.svg')}/>}
+                text={t('topbar.nav.themeLight')}
                 onClick={() => changeTheme(THEMES.light)}/>
       : <Button className={`pt-button pt-minimal ${s.sidebar_links} active-button`} minimal
-                icon={<img src={require('../../../assets/images/icons/custom/light_active/dark-mode.svg')}/>} text={t('topbar.nav.themeDark')}
+                icon={<img src={require('../../../assets/images/icons/custom/light_active/dark-mode.svg')}/>}
+                text={t('topbar.nav.themeDark')}
                 onClick={() => changeTheme(THEMES.dark)}/>);
 
   return (
-    <div>
-      <div className={s.logo}>{t('topbar.brand')}</div>
-      <div>
-        {renderNavItems()}
+    <nav role="navigation">
+      <div id={s.menuToggle}>
+        <div className={s.logo}>{t('topbar.brand')}</div>
+        <div id={s.burger}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <input type="checkbox"/>
+        <div id={s.menu}>
+          <div>
+            {renderNavItems()}
+          </div>
+          <NavLink
+            to={routes.SETTINGS}
+            className={`pt-button pt-minimal ${s.sidebar_links}`}
+            tabIndex="0"
+            activeClassName='menu-active'>
+            <div className={`${s.navlinkIcon} ${s.settings} ${(theme === THEMES.dark) ? s.dark : s.light}`}/>
+            <span>{t('topbar.nav.settings')}</span>
+          </NavLink>
+          <Button
+            className={`pt-button pt-minimal ${s.sidebar_links}`}
+            icon={(theme === THEMES.dark)
+              ? <img src={require('../../../assets/images/icons/custom/dark/logout.svg')}/>
+              : <img src={require('../../../assets/images/icons/custom/light/logout.svg')}/>
+            }
+            text={t('topbar.nav.logout')}
+            onClick={() => logout()}/>
+          <div className={s.theme_swith}>
+            {renderThemeToggler()}
+          </div>
+
+          <ul className={s.social_networks}>
+            <li><a href="https://bit.ly/ze0ntelegram"><FontAwesomeIcon icon='paper-plane' size='lg'/></a></li>
+            <li><a href="https://bit.ly/ze0ntwitter"><FontAwesomeIcon icon={['fab', 'twitter']} size='lg'/></a></li>
+            <li><a href="https://bit.ly/ze0nmedium2"><FontAwesomeIcon icon={['fab', 'medium-m']} size='lg'/></a></li>
+            <li><a href="http://bit.ly/ze0ntrgithub"><FontAwesomeIcon icon={['fab', 'github']} size='lg'/></a></li>
+          </ul>
+        </div>
       </div>
-      <NavLink
-        to={routes.SETTINGS}
-        className={`pt-button pt-minimal ${s.sidebar_links}`}
-        tabIndex="0"
-        activeClassName='menu-active'>
-        <div className={`${s.navlinkIcon} ${s.settings} ${(theme === THEMES.dark) ? s.dark : s.light}`}/>
-        <span>{t('topbar.nav.settings')}</span>
-      </NavLink>
-      <Button
-        className={`pt-button pt-minimal ${s.sidebar_links}`}
-        icon={(theme === THEMES.dark)
-          ? <img src={require('../../../assets/images/icons/custom/dark/logout.svg')}/>
-          : <img src={require('../../../assets/images/icons/custom/light/logout.svg')}/>
-        }
-        text={t('topbar.nav.logout')}
-        onClick={() => logout()}/>
-      <div className={s.theme_swith}>
-        {renderThemeToggler()}
-      </div>
-    </div>
+    </nav>
   );
 };
 
